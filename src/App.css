@@ -1,0 +1,112 @@
+/* Container for the calculator */
+.calculator {
+    max-width: 320px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: moveBackground 10s infinite alternate; /* Motion background effect */
+  }
+  
+  /* Animation for background motion */
+  @keyframes moveBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Display area */
+  .display {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    margin : 8px 0;
+    text-align: right;
+    font-size: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    grid-column: span 4; /* Make the display span across the full width */
+  }
+  
+  /* Button grid layout */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-gap: 10px;
+  }
+  
+  /* Base button styles */
+  button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Number buttons container */
+  .number-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for numbers */
+    grid-gap: 10px;
+  }
+  
+  /* Number button styles */
+  .number-buttons button {
+    background: #f7f7f7; /* Light grey background */
+    color: #333;
+  }
+  
+  /* Arithmetic operation buttons */
+  button#add, button#substraction, button#multiplication, button#division {
+    background: #ff8c00; /* Orange background */
+    color: #fff;
+  }
+  
+  /* AC button */
+  button#clear {
+    background: #d9534f; /* Red background */
+    color: #fff;
+    grid-column: span 2; /* Span 2 columns */
+  }
+  
+  /* Equals button */
+  button#equals {
+    background: #5bc0de; /* Light blue background */
+    color: #fff;
+  }
+  
+  /* Decimal button */
+  button#decimal {
+    background: #f7f7f7; /* Light grey background */
+    color: #333;
+  }
+  
+  /* Power button */
+  button#power {
+    background: #28a745; /* Green background */
+    color: #fff;
+    grid-column: span 2; /* Span 2 columns */
+  }
+  
+  /* Hover effects */
+  button:hover {
+    background: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Active button effects */
+  button:active {
+    background: #ccc;
+    transform: scale(0.98);
+  }
+  
+
+
+
+  
